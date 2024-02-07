@@ -1,37 +1,44 @@
 
-# Practica 1
+# Practica 1 de laboratorio - Introducción al lenguaje C
 
-Otro ensayo...
+> Para el caso, nos vamos a basar en el siguiente repo: https://github.com/dannymrock/SO-Lab2-20201
 
-Para el caso, nos vamos a basar en el siguiente repo: https://github.com/dannymrock/SO-Lab2-20201
+## Instrucciones
+
+Con el fin de insentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta practica se recomienda que lleve a cabo los siguientes pasos:
+* Uno de los integrantes debe realizar un fork de este repositorio.
+* La persona que haga el fork se bebe encargar de agregar como colaborador al compañero de trabajo con el fin de que la modificación del repositorio sea hecha grupalmente.
+* Cada uno de los integrantes del equipo puede hacer una copia local del laboratorio con el fin de colaborar en su desarrollo.
+No olvide ir actualizando la practica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporsionados (tal y como se explico en el laboratorio). Estos test serán el indicativo que digan como va su trabajo.
+
+## Recursos
 
 
-# Introduction
 
-**Before beginning:** Read this [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf); it has some useful tips for programming in the C environment.
+## Enunciado de la practica
 
-This project is a simple warm-up to get you used to how this whole
-project thing will go. It also serves to get you into the mindset of a C
-programmer, something you will become quite familiar with over the next few
-months. Good luck!
 
-You will write a simple program called `reverse`. This program should
-be invoked in one of the following ways:
+> **Nota**: Esta practica es una traducción de la práctica **Reverse** del libro de Remzi. Esta traducción puede tener muchos errores y a veces no ser fiel con lo que el autor quiere transmitir. Si desea leerla en ingles puede encontrar esto en el siguiente ([enlace](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse)).
+
+**Antes de empezar** a desarrollar esta practica, lea el [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf) el cual contiene algunos tips de utilidad para trabajar con en un entorno de programación.
+
+Esta practica no es mas que un simple calentamiento (warm-up) para que familiarizarlo con la forma de trabajo en varios de los proyectos que se realizaran en el laboratorio. También sirve punto de partida para empezar los primeros pasos con el lenguaje de programación C el cual se usará a lo largo del curso.
+
+Se pide que desarrollo un programa sencillo llamado `reverse` el cual se debe invocar siguiendo las instrucciones mostradas a continuación:
+
 ```sh
 prompt> ./reverse
 prompt> ./reverse input.txt
 prompt> ./reverse input.txt output.txt
 ```
 
-The above line means the users typed in the name of the reversing program
-`reverse` (the `./` in front of it simply refers to the current working
-directory (called dot, referred to as `.`) and the slash (`/`) is a separator;
-thus, in this directory, look for a program named `reverse`) and gave it
-either no command-line arguments, one command-line argument (an input file,
-`input.txt`), or two command-line arguments (an input file and an output file
-`output.txt`). 
+En cada una de las instrucciones anteriomente mostradas se puede ver que el usuario ha tecleado el nombre del programa de inversión `reverse` (el `./` delante simplemente se refiere al directorio de trabajo actual directorio, llamado punto, referido como `.`) y la barra (`/`) es un separador; así, en este directorio, se busco un programa llamado `reverse`). Notese que cada una de las instrucciones se invocaron de tres formas distintas:
+* En el caso la primera instrucción no se ingreso ningún argumento en la linea comandos.
+* En lo que respecta a la segunda instrucción se paso un argumento de línea de comandos (un archivo de entrada, `input.txt`).
+* En la última instrucción se pasaron dos argumentos de línea de órdenes (un fichero de entrada y un fichero de salida `salida.txt`).
 
-An input file might look like this: 
+Por ejemplo, si el archivo de entrada tiene el siguiente contenido:
+
 ```
 hello
 this
@@ -39,16 +46,16 @@ is
 a file
 ```
 
-The goal of the reversing program is to read in the data from the specified
-input file and reverse it; thus, the lines should be printed out in the reverse
-order of the input stream. Thus, for the aforementioned example, the output 
-should be:
+El objetivo del programa de inversión  `reverse` es leer los datos del archivo de entrada especificado e invertirlos; por lo tanto, las líneas se imprimirán en el orden del flujo de entrada. Así, para el ejemplo anterior, la salida debería ser:
+
 ```
 a file
 is
 this
 hello
 ```
+
+
 
 The different ways to invoke the file (as above) all correspond to slightly
 different ways of using this simple new Unix utility. For example, when
@@ -67,9 +74,9 @@ and write to standard output (i.e., the screen).
 
 Sounds easy, right? It should. But there are a few details...
 
-# Details
+## Details
 
-## Assumptions and Errors
+### Assumptions and Errors
 
 - **Input is the same as output:** If the input file and output file are the
 same file, you should print out an error message "Input and output file must
@@ -101,7 +108,7 @@ error to the screen using `fprintf()`, and send the error message to
 is accomplished in your C code as follows: `fprintf(stderr, "whatever the error message is\n");`
 
 
-## Useful Routines
+### Useful Routines
 
 To exit, call `exit(1)`. The number you pass to `exit()`, in this case 1, is
 then available to the user to see if the program returned an error (i.e.,
@@ -122,7 +129,7 @@ If you don't know how to use these functions, use the man pages. For
 example, typing `man malloc` at the command line will give you a lot of
 information on malloc.
 
-## Tips
+### Tips
 
 **Start small, and get things working incrementally.** For example, first
 get a program that simply reads in the input file, one line at a time, and
