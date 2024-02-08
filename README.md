@@ -1,28 +1,28 @@
 
-# Practica 1 de laboratorio - Introducción al lenguaje C
+# Práctica 1 de laboratorio - Introducción al lenguaje C
 
 > Para el caso, nos vamos a basar en el siguiente repo: https://github.com/dannymrock/SO-Lab2-20201
 
 ## Instrucciones
 
-Con el fin de insentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta practica se recomienda que lleve a cabo los siguientes pasos:
+Con el fin de incentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta práctica se recomienda que lleve a cabo los siguientes pasos:
 * Uno de los integrantes debe realizar un fork de este repositorio.
-* La persona que haga el fork se bebe encargar de agregar como colaborador al compañero de trabajo con el fin de que la modificación del repositorio sea hecha grupalmente.
+* La persona que haga el fork se debe encargar de agregar como colaborador al compañero de trabajo con el fin de que la modificación del repositorio sea hecha grupalmente.
 * Cada uno de los integrantes del equipo puede hacer una copia local del laboratorio con el fin de colaborar en su desarrollo.
-No olvide ir actualizando la practica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporsionados (tal y como se explico en el laboratorio). Estos test serán el indicativo que digan como va su trabajo.
+No olvide ir actualizando la práctica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explicó0 en el laboratorio). Estos test serán el indicativo de cómo va su trabajo.
 
 ## Recursos
 
 
 
-## Enunciado de la practica
+## Enunciado de la práctica
 
 
-> **Nota**: Esta practica es una traducción de la práctica **Reverse** del libro de Remzi. Esta traducción puede tener muchos errores y a veces no ser fiel con lo que el autor quiere transmitir. Si desea leerla en ingles puede encontrar esto en el siguiente ([enlace](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse)).
+> **Nota**: Esta práctica es una traducción de la práctica **Reverse** del libro del profesor Remzi. Esta traducción puede tener algunos errores y no ser fiel con lo que el autor quiere transmitir. Si desea leerla en inglés puede hacerlo en el siguiente ([enlace](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse)).
 
-**Antes de empezar** a desarrollar esta practica, lea el [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf) el cual contiene algunos tips de utilidad para trabajar con en un entorno de programación.
+**Antes de empezar** a desarrollar esta práctica, lea el [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf) el cual contiene algunos tips de utilidad para trabajar con en un entorno de programación.
 
-Esta practica no es mas que un simple calentamiento (warm-up) para que familiarizarlo con la forma de trabajo en varios de los proyectos que se realizaran en el laboratorio. También sirve punto de partida para empezar los primeros pasos con el lenguaje de programación C el cual se usará a lo largo del curso.
+Esta práctica no es más que un simple calentamiento (warm-up) para familiarizarlo con la forma de trabajo en varios de los proyectos que se realizarán en el laboratorio. También sirve de punto de partida para empezar los primeros pasos con el lenguaje de programación C el cual se usará a lo largo del curso.
 
 Se pide que desarrollo un programa sencillo llamado `reverse` el cual se debe invocar siguiendo las instrucciones mostradas a continuación:
 
@@ -32,9 +32,9 @@ prompt> ./reverse input.txt
 prompt> ./reverse input.txt output.txt
 ```
 
-En cada una de las instrucciones anteriomente mostradas se puede ver que el usuario ha tecleado el nombre del programa de inversión `reverse` (el `./` delante simplemente se refiere al directorio de trabajo actual directorio, llamado punto, referido como `.`) y la barra (`/`) es un separador; así, en este directorio, se busco un programa llamado `reverse`). Notese que cada una de las instrucciones se invocaron de tres formas distintas:
-* En el caso la primera instrucción no se ingreso ningún argumento en la linea comandos.
-* En lo que respecta a la segunda instrucción se paso un argumento de línea de comandos (un archivo de entrada, `input.txt`).
+En cada una de las instrucciones anteriomente mostradas se puede ver que el usuario ha tecleado el nombre del programa de inversión `reverse` (el `./` delante simplemente se refiere al directorio de trabajo actual directorio, llamado punto, referido como `.` y la barra `/` es un separador; así, en este directorio, se buscó un programa llamado `reverse`). Nótese que cada una de las instrucciones se invocaron de tres formas distintas:
+* En el caso la primera instrucción no se ingresó ningún argumento en la linea comandos.
+* En lo que respecta a la segunda instrucción se pasó un argumento de línea de comandos (un archivo de entrada, `input.txt`).
 * En la última instrucción se pasaron dos argumentos de línea de órdenes (un fichero de entrada y un fichero de salida `salida.txt`).
 
 Por ejemplo, si el archivo de entrada tiene el siguiente contenido:
@@ -46,7 +46,7 @@ is
 a file
 ```
 
-El objetivo del programa de inversión  `reverse` es leer los datos del archivo de entrada especificado e invertirlos; por lo tanto, las líneas se imprimirán en el orden del flujo de entrada. Así, para el ejemplo anterior, la salida debería ser:
+El objetivo del programa de inversión `reverse` es leer los datos del archivo de entrada especificado e invertirlos; por lo tanto, las líneas se imprimirán en el orden del flujo de entrada. Así, para el ejemplo anterior, la salida debería ser:
 
 ```
 a file
@@ -55,57 +55,33 @@ this
 hello
 ```
 
+Las diferentes formas de invocar el archivo (mostradas enteriormente) corresponden a formas ligeramente diferentes de usar esta nueva y sencilla utilidad de Unix. Por ejemplo, cuando se invoca con dos argumentos de línea de comandos, el programa debe leer el archivo de entrada que proporciona el usuario y escribir la versión invertida de dicho archivo en el archivo de salida que proporciona el usuario.
+
+Cuando se invoca con un solo argumento de línea de comando, el usuario proporciona el archivo de entrada, pero el archivo debe imprimirse en la pantalla. En los sistemas basados en Unix, imprimir en la pantalla es lo mismo que escribir en un archivo especial conocido como **salida estándar** o "stdout" para abreviar.
+
+Finalmente, cuando se invoca sin ningún argumento, su programa de inversión debe leer desde la **entrada estándar** (`stdin`), que es la entrada que ingresa un usuario, y escribir en la salida estándar (es decir, la pantalla).
+
+Suena fácil, ¿verdad? Debería serlo. Pero hay algunos detalles...
 
 
-The different ways to invoke the file (as above) all correspond to slightly
-different ways of using this simple new Unix utility. For example, when
-invoked with two command-line arguments, the program should read from the
-input file the user supplies and write the reversed version of said file to
-the output file the user supplies.
 
-When invoked with just one command-line argument, the user supplies the input
-file, but the file should be printed to the screen. In Unix-based systems,
-printing to the screen is the same as writing to a special file known as
-**standard output**, or `stdout` for short.
+## Detalles
 
-Finally, when invoked without any arguments, your reversing program should
-read from **standard input** (`stdin`), which is the input that a user types in,
-and write to standard output (i.e., the screen).
+### Suposiciones y errores
 
-Sounds easy, right? It should. But there are a few details...
+- **La entrada es la misma que la salida:** Si el archivo de entrada y el archivo de salida son el mismo archivo, debe imprimir un mensaje de error "El archivo de entrada y salida deben diferir" y salir con el código de retorno 1.
 
-## Details
+- **Longitud de la cadena:** No puedes asumir nada sobre la longitud que debe tener una línea. Por lo tanto, es posible que tengas que leer en una línea de entrada muy larga...
 
-### Assumptions and Errors
+- **Longitud del archivo:** No puedes asumir nada sobre la longitud del archivo, es decir, puede ser **MUY** largo.
 
-- **Input is the same as output:** If the input file and output file are the
-same file, you should print out an error message "Input and output file must
-differ" and exit with return code 1.
+- **Archivos no válidos:** Si el usuario especifica un archivo de entrada o un archivo de salida, y por alguna razón, cuando intenta abrir dicho archivo (por ejemplo, `input.txt`) y falla, debe imprimir exactamente lo siguiente mensaje de error: `error: no se puede abrir el archivo 'input.txt'` y luego salir con el código de retorno 1 (es decir, llamar a `exit(1);`).
 
-- **String length:** You may not assume anything about how long a line should
-be. Thus, you may have to read in a very long input line...
+- **Malloc falla:** Si llama a `malloc()` para asignar algo de memoria y malloc falla, debe imprimir el mensaje de error `malloc falló` y salir con el código de retorno 1.
 
-- **File length:** You may not assume anything about the length of the
-file, i.e., it may be **VERY** long.
+- **Demasiados argumentos pasados al programa:** Si el usuario ejecuta `reverse` con demasiados argumentos, imprima `usage: reverse <input> <output>` y salga con el código de retorno 1.
 
-- **Invalid files:** If the user specifies an input file or output file, and
-for some reason, when you try to open said file (e.g., `input.txt`) and
-fail, you should print out the following exact error message: `error:
-cannot open file 'input.txt'` and then exit with return code 1 (i.e., call
-`exit(1);`).
-
-- **Malloc fails:** If you call `malloc()` to allocate some memory, and
-malloc fails, you should print the error message `malloc failed` and exit
-with return code 1.
-
-- **Too many arguments passed to program:** If the user runs `reverse`
-with too many arguments, print `usage: reverse <input> <output>` and exit with
-return code 1. 
-
-- **How to print error messages:** On any error, you should print the
-error to the screen using `fprintf()`, and send the error message to
-`stderr` (standard error) and not `stdout` (standard output). This
-is accomplished in your C code as follows: `fprintf(stderr, "whatever the error message is\n");`
+- **Cómo imprimir mensajes de error:** Ante cualquier error, debe imprimir el error en la pantalla usando `fprintf()` y enviar el mensaje de error a `stderr` (error estándar) y no a `stdout` (salida estándar). Esto se logra en su código C de la siguiente manera: `fprintf(stderr, "cualquiera que sea el mensaje de error\n");`
 
 
 ### Useful Routines
