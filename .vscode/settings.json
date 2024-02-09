@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "helper1.h": "c",
+        "time.h": "c"
+    }
+}
