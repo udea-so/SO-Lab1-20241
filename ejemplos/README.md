@@ -24,4 +24,6 @@
 * https://realpython.com/c-for-python-programmers/
 * https://developerhelp.microchip.com/xwiki/bin/view/software-tools/c-programming/
 * https://github.com/MicrochipTech/dh-c-programming-exercise-files
-
+* https://github.com/PacktPublishing/Learn-C-Programming
+* https://github.com/ptdecker/cbasics
+* https://github.com/LiaBooks/C-Programming
