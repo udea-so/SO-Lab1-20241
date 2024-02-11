@@ -67,3 +67,6 @@ again first check the man page.
 ```bash
 gcc -o cylinder cylinder.c -Wall -lm
 ```
+
+### Compilación multiarchivo
+

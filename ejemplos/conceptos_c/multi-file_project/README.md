@@ -38,3 +38,8 @@ gcc -o app.out *.o -lm
 ```bash
 ./main.out
 ```
+
+
+## REferencias
+
+* https://makefiletutorial.com/

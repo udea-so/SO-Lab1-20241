@@ -1,3 +1,7 @@
+/*
+Author: Adalbert Gerald Soosai Raj
+URL: https://pages.cs.wisc.edu/~gerald/cs354/Spring2019/code/lecture03/structs_and_pointers01.c
+*/
 
 #include <stdio.h>
 
@@ -5,7 +9,6 @@ struct student {
 	char *name;
 	int id;
 };
-
 
 void print_student(struct student s) {
 	printf("name: %s\t id: %d\n", s.name, s.id);
