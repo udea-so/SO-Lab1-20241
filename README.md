@@ -126,53 +126,24 @@ Suena fácil, ¿verdad? Debería serlo. Pero hay algunos detalles...
 
 - **Cómo imprimir mensajes de error:** Ante cualquier error, debe imprimir el error en la pantalla usando `fprintf()` y enviar el mensaje de error a `stderr` (error estándar) y no a `stdout` (salida estándar). Esto se logra en su código C de la siguiente manera: `fprintf(stderr, "whatever the error message is\n");`
 
-### Useful Routines
+### Rutinas de utilidad
 
-To exit, call `exit(1)`. The number you pass to `exit()`, in this case 1, is
-then available to the user to see if the program returned an error (i.e.,
-return a non-zero) or exited cleanly (i.e., returned 0).
+Para salir, llame `exit(1)`, el numero que se pasa a `exit()`, esta disponible indica al usuario si el programa ha devuelto un error (es decir, devuelve un valor distinto de cero) o ha salido limpiamente (es decir, devuelve 0).
 
-For reading in the input file, the following routines will make your life
-easy: `fopen()`, `getline()`, and `fclose()`.
+Para leer el archivo de entrada, las siguientes rutinas le harán la vida más fácil: `fopen()`, `getline()`, y `fclose()`.
 
-For printing (to screen, or to a file), use `fprintf()`.  Note that it is easy
-to write to standard output by passing `stdout` to `fprintf()`; it is also
-easy to write to a file by passing in the `FILE *` returned by `fopen`, e.g.,
-`fp=fopen(...); fprintf(fp, ...);`.
+Para desplegar (en la pantalla, o en una archivo), use la función `fprintf()`.  Tenga en cuenta que es fácil escribir en la salida estándar pasando `stdout` a `fprintf()`; también es fácil escribir en un archivo pasando el `FILE *` devuelto por `fopen`, por ejemplo, `fp=fopen(...); fprintf(fp, ...);`.
 
-The routine `malloc()` is useful for memory allocation. Perhaps for
-adding elements to a list?
-  
-If you don't know how to use these functions, use the man pages. For
-example, typing `man malloc` at the command line will give you a lot of
-information on malloc.
+La rutina `malloc()` es util para reserva de memoria. ¿Quizás para añadir elementos a una lista?
+
+Si no sabe como utilizar estas funciones, consulte el manual (`man`). Por ejemplo, escribir en la terminal `man malloc` le mostrará bastante información sobre `malloc`
 
 ### Tips
 
-**Start small, and get things working incrementally.** For example, first
-get a program that simply reads in the input file, one line at a time, and
-prints out what it reads in. Then, slowly add features and test them as you
-go.
+**Start small, and get things working incrementally**  - **Empieze poco a poco y haga que las cosas funcionen gradualmente**: Por ejemplo, primero haga un programa que simplemente lea en el archivo de entrada, una línea a la vez, y luego imprima lo que se lea. Luego, poco a poco vaya añadiendo características y probandolas sobre la marcha.
 
-For example, the way we wrote this code was first to write some code that used
-`fopen()`, `getline()`, and `fclose()` to read an input file and print it
-out. Then, we wrote code to store each input line into a linked list and made
-sure that worked. Then, we printed out the list in reverse order. Then we made
-sure to handle error cases. And so forth...
+Por ejemplo, la forma de escribir este código es primero escribir algun fragmento de codigo que usara `fopen()`, `getline()` y `fclose()` para leer el archivo de entrada y luego imprimirlo. Despues, escribir el código para almacenar cada linea leida en la lista enlazada y verificar que esto funciona correctamente. A continuación, se imprime la lista en orden inverso. Posteriormente, asegurarse de que los casos de error son manejados y asi sucesivamente...
 
-**Testing is critical.** A great programmer we once knew said you have to
-write five to ten lines of test code for every line of code you produce;
-testing your code to make sure it works is crucial. Write tests to see if your
-code handles all the cases you think it should. Be as comprehensive as you can
-be. Of course, when grading your projects, we will be. Thus, it is better if
-you find your bugs first, before we do.
+**Testing is critical** - **Las pruebas son fundamentales**: Un gran programador dijo que hay que escribir de cinco a diez líneas de código de prueba por cada línea de código que se produzca; probar el código para asegurarte de que funciona es crucial. Escriba pruebas para ver si el código maneja todos los casos que este debería tratar. Se debe ser lo más exhaustivo posible. Por supuesto, a la hora de calificar los proyectos, esto sera una regla. Por lo tanto, es mejor que encuentre los errores primero, antes de que lo hagamos nosotros.
 
-**Keep old versions around.** Keep copies of older versions of your program
-around, as you may introduce bugs and not be able to easily undo them. A
-simple way to do this is to keep copies around, by explicitly making copies of
-the file at various points during development. For example, let's say you get
-a simple version of `reverse.c` working (say, that just reads in the file);
-type `cp reverse.c reverse.v1.c` to make a copy into the file
-`reverse.v1.c`. More sophisticated developers use version control systems git
-(perhaps through github); such a tool is well worth learning, so do it!
-
+**Keep old versions around** - **Conserve las versiones antiguas**: Mantenga copias de versiones anteriores de su programa, ya que a veces se pueden introducir errores y no ser capaz de corregirlos fácilmente. Una forma sencilla de hacer esto es mantener copias, haciendo explícitamente copias del archivo en varios puntos durante el desarrollo. Por ejemplo, suponiendo que tenga una versión simple de `reverse.c` funcionando (por ejemplo, que sólo lea el archivo); use `cp reverse.c reverse.v1.c` para hacer una copia en el archivo `reverse.v1.c`. Los desarrolladores más sofisticados usan sistemas de control de versiones git (quizás a través de github); vale la pena aprender una herramienta así, ¡así que hagalo!
