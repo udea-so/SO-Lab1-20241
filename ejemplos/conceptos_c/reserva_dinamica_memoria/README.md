@@ -1,33 +1,29 @@
-# Apuntadores
-
-# Arreglos y matrices
+# Reserva dinamica de memoria
 
 ## Lista de ejemplos
 
 |#|Ejemplo|
 |---|---|
-|1|[pointers01.c](pointers01.c)|
-|2|[pointers02.c](pointers02.c)|
-|3|[pointers03.c](pointers03.c)|
-|4|[pointers04.c](pointers04.c)|
-|5|[pointers05.c](pointers05.c)|
-|6|[null.c](null.c)|
-|7|[arrays_and_pointers01.c](arrays_and_pointers01.c)|
-|8|[arrays_and_pointers02.c](arrays_and_pointers02.c)|
-|9|[arrays_and_pointers03.c](arrays_and_pointers03.c)|
-|10|[arrays_and_pointers04.c](arrays_and_pointers04.c|
-|11|[arrays_and_pointers05.c](arrays_and_pointers05.c)|
-|12|[structs_and_pointers01.c](structs_and_pointers01.c)|
-|13|[structs_and_pointers02.c](structs_and_pointers02.c)|
-|14|[structs_and_pointers03.c](structs_and_pointers03.c)|
+|1|[dynamic_array01.c](dynamic_array01.c)|
+|2|[dynamic_array02.c](dynamic_array02.c)|
+|3|[dynamic_array03.c](dynamic_array03.c)|
+|4|[dynamic_array04.c](dynamic_array04.c)|
+|5|[dynamic_array05.c](dynamic_array05.c)|
+|6|[dynamic_array06.c](dynamic_array06.c)|
+|7|[dynamic_array07.c](dynamic_array07.c)|
+|8|[dynamic_array_inclass.c](dynamic_array_inclass.c)|
+|9|[linked_list.c](linked_list.c)|
+|10|[linked_list_inclass.c](linked_list_inclass.c)|
+|10|[sizeof_arrays.c](sizeof_arrays.c)|
 
 ## Referencias teoricas
 
 A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:
 * **Apuntadores y arreglos** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte2/ptr_arrays.ipynb)
 * **Apuntadores y arreglos multidimensionales** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte3/matrices_ptr.ipynb)
-* **Estructuras en C**[[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte4/estructuras.ipynb)
-* **Structs** [[link]](https://diveintosystems.org/book/C2-C_depth/structs.html)
+* **Estructuras en C** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte4/estructuras.ipynb)
+* **Memoria dinámica en C** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte5/memoria_dinamica.ipynb)
+* **Dynamic Memory Allocation** [[link]](https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html)
 
 ## Corriendo los ejemplos
 
@@ -46,6 +42,7 @@ Para ejecutar los ejemplos use el nombre del archivo resultante al compilar sin 
 ## Referencias
 
 * https://skills.microchip.com/page/c-programming
+* https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html
 * https://skills.microchip.com/fundamentals-of-the-c-programming-language-part-i
 * https://skills.microchip.com/fundamentals-of-the-c-programming-language-part-ii
 * https://skills.microchip.com/fundamentals-of-the-c-programming-language-part-iii

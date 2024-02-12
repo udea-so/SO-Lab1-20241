@@ -48,6 +48,7 @@ Los conceptos básicos relacionados con este lenguaje son bastante similares a l
 5. **The C programming Languaje** ([link](http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf)): Libro del lenguaje C de Dennis Ritchie y Brian Kernighan.
 6. **C for Python Programmers** ([link](https://realpython.com/c-for-python-programmers/)): Tutorial de Lenguaje C para programadores de Python de [real Python](https://realpython.com/)
 7. **C for Python Programmers** ([link](https://www.cs.toronto.edu/~patitsas/cs190/c_for_python.html)): Lenguaje C para programadores de Python de la universidad de Toronto.
+7. **Appendix 1: Chapter 1 for Java Programmers - Libro: Dive Into Systems** ([link](https://diveintosystems.org/book/Appendix1/index.html))
 
 A manera de resumen, se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
 

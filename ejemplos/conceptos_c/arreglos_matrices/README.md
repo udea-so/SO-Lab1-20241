@@ -17,6 +17,7 @@
 A continuación se muestran algunos apuntes de clase que ilustran algunos conceptos teoricos necesarios para comprender la lista de ejemplos adjuntos:
 * **Apuntadores y arreglos** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte2/ptr_arrays.ipynb)
 * **Apuntadores y arreglos multidimensionales** [[link]](https://github.com/dannymrock/UdeA-SO-Lab/blob/master/lab0/lab0b/parte3/matrices_ptr.ipynb)
+* **Arrays and Strings** [[link]](https://diveintosystems.org/book/C1-C_intro/arrays_strings.html)
 
 ## Corriendo los ejemplos
 

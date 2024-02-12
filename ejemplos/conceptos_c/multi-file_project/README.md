@@ -76,3 +76,4 @@ A continuación se muestran dos archivos makefiles, uno sencillo y otro que hace
 ## Referencias
 
 * https://makefiletutorial.com/
+* https://diveintosystems.org/book/C2-C_depth/advanced_writing_libraries.html
