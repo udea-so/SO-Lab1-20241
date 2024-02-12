@@ -1,26 +1,70 @@
 
 # Práctica 1 de laboratorio - Introducción al lenguaje C
 
-> Para el caso, nos vamos a basar en el siguiente repo: https://github.com/dannymrock/SO-Lab2-20201
+> ## Objetivos
+> * Aprender a codificar programas usando el lenguaje C a nivel basico e intermedio.
+> * Aprender a usar las herramientas basicas para desarrollar aplicaciones en un ambiente de desarrollo linux.
 
-## Instrucciones
+## Herramientas necesarias
+
+Para trabajar en el laboratorio, se necesita tener una maquina con un sistema operativo Linux instalado de manera nativa o mediante maquina virtual o en su defecto una maquina con MacOS. Si su maquina usted posee una maquina con Windows o superior y no cumple el requisito anterior, la recomentación es que instale la ultima versión del [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux). Para llevar a cabo esto último la recomendación es que consulte los siguientes enlaces:
+1. **Entrenamiento: Introducción a Subsistema de Windows para Linux (WSL)** ([link](https://learn.microsoft.com/es-es/training/modules/wsl-introduction/))
+2. **Configurar un entorno de desarrollo de WSL** ([link]((https://learn.microsoft.com/es-es/windows/wsl/setup/environment)))
+3. **Ejecución de aplicaciones de GUI de Linux en el Subsistema de Windows para Linux**([link](https://learn.microsoft.com/es-es/windows/wsl/tutorials/gui-apps)) 
+
+## Primeros pasos
 
 Con el fin de incentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta práctica se recomienda que lleve a cabo los siguientes pasos:
 * Uno de los integrantes debe realizar un fork de este repositorio.
+
+  ![fork](fork.png)
+
 * La persona que haga el fork se debe encargar de agregar como colaborador al compañero de trabajo con el fin de que la modificación del repositorio sea hecha grupalmente.
+
 * Cada uno de los integrantes del equipo puede hacer una copia local del laboratorio con el fin de colaborar en su desarrollo.
-No olvide ir actualizando la práctica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explicó0 en el laboratorio). Estos test serán el indicativo de cómo va su trabajo.
 
-## Recursos
+No olvide ir actualizando la práctica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explicó0 en el laboratorio). Estos test serán el indicativo de cómo va su trabajo. 
 
+Una vez hecho lo anterior puede empezar el desarrollo de la practica.
 
+### Conceptos importantes
 
-## Enunciado de la práctica
+Para llevar a cabo el procedimiento descrito anteriormente es importante que tenga conocimientos basicos de manego de [github](https://en.wikipedia.org/wiki/GitHub). A continuación, se comparte material de utilidad a cerca del uso de esta herramienta con el fin de que aplique lo que aqui se muestra:
+1. **Introducción a Git** ([link](https://learn.microsoft.com/es-es/training/modules/intro-to-git/)): Tutorial de Microsoft Learn sobre el manejo de la utilidad ```git```
+2. **Introducción a GitHub** ([link](https://learn.microsoft.com/es-es/training/modules/introduction-to-github/)): Tutorial de Microsoft Learn sobre ```github```
+3. **Laboratorio git parte 1** ([link](https://github.com/dannymrock/UdeA-SO-Lab/tree/master/lab0/lab0a/git_basico)): Apuntes de clase viejos sobre el manejo del git.
 
+Ademas del manejo de la herramienta anterior, es sumamente importante tener un conocimiento sobre el manejo de la linea de comandos de linux. En los siguientes enlaces se 
+
+## Recursos lenguaje C
+
+A lo largo de todo el curso (teoria y practica), se empleara el lenguaje C. Como este es un lenguaje poco usado en el ambito de la carrera de Ingenieria de Sistemas se abordará de manera introductoria este lenguaje a lo largo del laboratorio con el fin de que se familiarice.
+
+Los conceptos básicos relacionados con este lenguaje son bastante similares a lo que se usan en otros lenguajes de programación empleados a lo largo de su carrera (como python y java); sin embargo, hay unos cuantos que le resultaran nuevos. Es en estos últimos en los que haremos enfasis. A continuación, se muestran algunos recursos que le serán de utilidad:
+1. **Apuntes de clase sobre el lenguaje C** ([link](https://github.com/dannymrock/UdeA-SO-Lab/tree/master/lab0/lab0b)): Apuntes del curso sobre los principales conceptos del lenguaje C que se van a emplear. 
+2. **Stanford CS Education Library** ([link](http://cslibrary.stanford.edu/)): Material de Computer Science de la universidad de Stanford.
+3. **The GNU C Reference Manual** ([link](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)): Manual de referencia del lenguaje C de la GNU.
+4. **C for Java Programmers: Tutorial** ([link](https://www.cs.rochester.edu/u/ferguson/csc/c/tutorial/)): Tutorial de la Universidad de Ronchester sobre el lenguaje C para programadores de Java.
+5. **The C programming Languaje** ([link](http://cslabcms.nju.edu.cn/problem_solving/images/c/cc/The_C_Programming_Language_%282nd_Edition_Ritchie_Kernighan%29.pdf)): Libro del lenguaje C de Dennis Ritchie y Brian Kernighan.
+6. **C for Python Programmers** ([link](https://realpython.com/c-for-python-programmers/)): Tutorial de Lenguaje C para programadores de Python de [real Python](https://realpython.com/)
+7. **C for Python Programmers** ([link](https://www.cs.toronto.edu/~patitsas/cs190/c_for_python.html)): Lenguaje C para programadores de Python de la universidad de Toronto.
+
+A manera de resumen, se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)
+** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
+
+## Practica
 
 > **Nota**: Esta práctica es una traducción de la práctica **Reverse** del libro del profesor Remzi. Esta traducción puede tener algunos errores y no ser fiel con lo que el autor quiere transmitir. Si desea leerla en inglés puede hacerlo en el siguiente ([enlace](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse)).
 
-**Antes de empezar** a desarrollar esta práctica, lea el [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf) el cual contiene algunos tips de utilidad para trabajar con en un entorno de programación.
+### Antes de empezar
+
+Antes de empezar a desarrollar esta práctica, lea el [lab tutorial](http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf) el cual contiene algunos tips de utilidad para trabajar con en un entorno de programación. 
+
+Adicionalmente, se presenta el siguiente material con algunos ejemplos cuya comprensión le pueden ayudar a familiarizarse con todos los conceptos teorico-practicos necesarios para desarrollar la siguiente practica. A continuación se detalla el material de apoyo.
+* **Desarrollo de aplicaciones en lenguaje C usando Linux** ([link](ejemplos/lab_tutorial/))
+* **Ejemplos varios del lenguaje C** ([link](ejemplos/conceptos_c/))
+
+### Enunciado
 
 Esta práctica no es más que un simple calentamiento (warm-up) para familiarizarlo con la forma de trabajo en varios de los proyectos que se realizarán en el laboratorio. También sirve de punto de partida para empezar los primeros pasos con el lenguaje de programación C el cual se usará a lo largo del curso.
 
