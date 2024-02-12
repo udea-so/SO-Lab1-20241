@@ -9,7 +9,7 @@
 
 Para trabajar en el laboratorio, se necesita tener una maquina con un sistema operativo Linux instalado de manera nativa o mediante maquina virtual o en su defecto una maquina con MacOS. Si su maquina usted posee una maquina con Windows o superior y no cumple el requisito anterior, la recomentación es que instale la ultima versión del [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux). Para llevar a cabo esto último la recomendación es que consulte los siguientes enlaces:
 1. **Entrenamiento: Introducción a Subsistema de Windows para Linux (WSL)** ([link](https://learn.microsoft.com/es-es/training/modules/wsl-introduction/))
-2. **Configurar un entorno de desarrollo de WSL** ([link]((https://learn.microsoft.com/es-es/windows/wsl/setup/environment)))
+2. **Configurar un entorno de desarrollo de WSL** ([link](https://learn.microsoft.com/es-es/windows/wsl/setup/environment))
 3. **Ejecución de aplicaciones de GUI de Linux en el Subsistema de Windows para Linux**([link](https://learn.microsoft.com/es-es/windows/wsl/tutorials/gui-apps)) 
 
 ## Primeros pasos
@@ -49,8 +49,7 @@ Los conceptos básicos relacionados con este lenguaje son bastante similares a l
 6. **C for Python Programmers** ([link](https://realpython.com/c-for-python-programmers/)): Tutorial de Lenguaje C para programadores de Python de [real Python](https://realpython.com/)
 7. **C for Python Programmers** ([link](https://www.cs.toronto.edu/~patitsas/cs190/c_for_python.html)): Lenguaje C para programadores de Python de la universidad de Toronto.
 
-A manera de resumen, se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)
-** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
+A manera de resumen, se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
 
 ## Practica
 

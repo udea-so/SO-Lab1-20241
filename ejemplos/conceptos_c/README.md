@@ -1,8 +1,15 @@
-# Conceptos importantes de C
+# Miselanea de ejemplos
 
-## Programas de un solo archivo multiarchivo
+## Lista de ejemplos
 
-## Programas multiarchivo
+- [x] Arreglos y matrices [[link]](arreglos_matrices/)
+- [x] Estructuras [[link]](estructuras/)
+- [x] Apuntadores [[link]](punteros/)
+- [x] Linea de comandos (En construcción...)
+- [x] Utilidad Make [[link]](multi-file_project/)
+- [] Memoria dinamica (En construcción...)
+- [] Listas enlazadas (En construcción...)
+- [] Manejo de archivos (En construcción...)
 
 
 ## Referencias

@@ -1,20 +1,9 @@
-# Ejemplos a analizar
+# Miselanea de ejemplos
 
+## Temario principal
 
-## Coneptos importantes
-
-
-
-* Pointers
-* 2d arrays
-* cmd line args
-* structures
-
-* Stack vs Heap
-* dynamic memory
-* linked lists
-
-
+1. Desarrollo de aplicaciones en lenguaje C usando Linux ([link](lab_tutorial/))
+2. Ejemplos varios del lenguaje C ([link](conceptos_c/))
 
 ## Referencias
 
@@ -27,3 +16,4 @@
 * https://github.com/PacktPublishing/Learn-C-Programming
 * https://github.com/ptdecker/cbasics
 * https://github.com/LiaBooks/C-Programming
+
