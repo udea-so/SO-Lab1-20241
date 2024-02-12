@@ -125,11 +125,8 @@ Suena fácil, ¿verdad? Debería serlo. Pero hay algunos detalles...
 - **Demasiados argumentos pasados al programa:** Si el usuario ejecuta `reverse` con demasiados argumentos, imprima `usage: reverse <input> <output>` y salga con el código de retorno 1.
 
 - **Cómo imprimir mensajes de error:** Ante cualquier error, debe imprimir el error en la pantalla usando `fprintf()` y enviar el mensaje de error a `stderr` (error estándar) y no a `stdout` (salida estándar). Esto se logra en su código C de la siguiente manera: `fprintf(stderr, "whatever the error message is\n");`
-<<<<<<< HEAD
 
 ### Rutinas de utilidad
-=======
->>>>>>> dca1f320860d0fd2ace8d52fac407defb2a61924
 
 Para salir, llame `exit(1)`, el numero que se pasa a `exit()`, esta disponible indica al usuario si el programa ha devuelto un error (es decir, devuelve un valor distinto de cero) o ha salido limpiamente (es decir, devuelve 0).
 
