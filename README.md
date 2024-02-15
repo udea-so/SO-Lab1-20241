@@ -2,19 +2,19 @@
 # Práctica 1 de laboratorio - Introducción al lenguaje C
 
 > ## Objetivos
-> * Aprender a codificar programas usando el lenguaje C a nivel basico e intermedio.
-> * Aprender a usar las herramientas basicas para desarrollar aplicaciones en un ambiente de desarrollo linux.
+> * Aprender a codificar programas usando el lenguaje C a nivel básico e intermedio.
+> * Aprender a usar las herramientas básicas para desarrollar aplicaciones en un ambiente de desarrollo linux.
 
 ## Herramientas necesarias
 
-Para trabajar en el laboratorio, se necesita tener una maquina con un sistema operativo Linux instalado de manera nativa o mediante maquina virtual o en su defecto una maquina con MacOS. Si su maquina usted posee una maquina con Windows o superior y no cumple el requisito anterior, la recomentación es que instale la ultima versión del [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux). Para llevar a cabo esto último la recomendación es que consulte los siguientes enlaces:
+Para trabajar en el laboratorio se necesita tener una máquina con un sistema operativo Linux instalado de manera nativa, mediante máquina virtual o en su defecto una máquina con MacOS. Si usted posee una máquina con Windows y no cumple el requisito anterior, la recomentación es que instale la última versión del [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux). Para llevar a cabo esto último consulte los siguientes enlaces:
 1. **Entrenamiento: Introducción a Subsistema de Windows para Linux (WSL)** ([link](https://learn.microsoft.com/es-es/training/modules/wsl-introduction/))
 2. **Configurar un entorno de desarrollo de WSL** ([link](https://learn.microsoft.com/es-es/windows/wsl/setup/environment))
 3. **Ejecución de aplicaciones de GUI de Linux en el Subsistema de Windows para Linux**([link](https://learn.microsoft.com/es-es/windows/wsl/tutorials/gui-apps)) 
 
 ## Primeros pasos
 
-Con el fin de incentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta práctica se recomienda que lleve a cabo los siguientes pasos:
+Con el fin de incentivar el trabajo en equipo y el uso de repositorios, antes de comenzar a trabajar en esta práctica, se recomienda que lleve a cabo los siguientes pasos:
 * Uno de los integrantes debe realizar un fork de este repositorio.
 
   ![fork](fork.png)
@@ -23,24 +23,26 @@ Con el fin de incentivar el trabajo en equipo y el uso de repositorios, antes de
 
 * Cada uno de los integrantes del equipo puede hacer una copia local del laboratorio con el fin de colaborar en su desarrollo.
 
-No olvide ir actualizando la práctica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explicó0 en el laboratorio). Estos test serán el indicativo de cómo va su trabajo. 
+No olvide ir actualizando la práctica del laboratorio a medida que vaya avanzando en esta. Para el caso, vaya llevando a cabo los test proporcionados (tal y como se explicó en el laboratorio). Estos test serán el indicativo de cómo va su trabajo. 
 
-Una vez hecho lo anterior puede empezar el desarrollo de la practica.
+Una vez hecho lo anterior puede empezar el desarrollo de la práctica.
 
 ### Conceptos importantes
 
-Para llevar a cabo el procedimiento descrito anteriormente es importante que tenga conocimientos basicos de manego de [github](https://en.wikipedia.org/wiki/GitHub). A continuación, se comparte material de utilidad a cerca del uso de esta herramienta con el fin de que aplique lo que aqui se muestra:
+Para llevar a cabo el procedimiento descrito anteriormente es importante que tenga conocimientos básicos de manejo de [github](https://en.wikipedia.org/wiki/GitHub). A continuación, se comparte material de utilidad a cerca del uso de esta herramienta con el fin de que aplique lo que aquí se muestra:
 1. **Introducción a Git** ([link](https://learn.microsoft.com/es-es/training/modules/intro-to-git/)): Tutorial de Microsoft Learn sobre el manejo de la utilidad ```git```
 2. **Introducción a GitHub** ([link](https://learn.microsoft.com/es-es/training/modules/introduction-to-github/)): Tutorial de Microsoft Learn sobre ```github```
 3. **Laboratorio git parte 1** ([link](https://github.com/dannymrock/UdeA-SO-Lab/tree/master/lab0/lab0a/git_basico)): Apuntes de clase viejos sobre el manejo del git.
 
-Ademas del manejo de la herramienta anterior, es sumamente importante tener un conocimiento sobre el manejo de la linea de comandos de linux. En los siguientes enlaces se 
+Además del manejo de la herramienta git, es sumamente importante tener un conocimiento sobre el manejo de la línea de comandos de linux. En los siguientes enlaces puede consultar algunos tutoriales sobre este tema: 
+1. ...
+2. ...
 
 ## Recursos lenguaje C
 
-A lo largo de todo el curso (teoria y practica), se empleara el lenguaje C. Como este es un lenguaje poco usado en el ambito de la carrera de Ingenieria de Sistemas se abordará de manera introductoria este lenguaje a lo largo del laboratorio con el fin de que se familiarice.
+A lo largo de todo el curso (teoría y práctica) se empleará el lenguaje C. Como este es un lenguaje poco usado en el ámbito de la carrera de Ingenieria de Sistemas se abordará de manera introductoria este lenguaje a lo largo del laboratorio con el fin de que usted se familiarice.
 
-Los conceptos básicos relacionados con este lenguaje son bastante similares a lo que se usan en otros lenguajes de programación empleados a lo largo de su carrera (como python y java); sin embargo, hay unos cuantos que le resultaran nuevos. Es en estos últimos en los que haremos enfasis. A continuación, se muestran algunos recursos que le serán de utilidad:
+Los conceptos básicos relacionados con este lenguaje son bastante similares a lo que se usan en otros lenguajes de programación empleados a lo largo de su carrera (como python y java); sin embargo, hay unos cuantos temas que le resultaran nuevos. Es en estos últimos en los que haremos énfasis. A continuación, se muestran algunos recursos que le serán de utilidad:
 1. **Apuntes de clase sobre el lenguaje C** ([link](https://github.com/dannymrock/UdeA-SO-Lab/tree/master/lab0/lab0b)): Apuntes del curso sobre los principales conceptos del lenguaje C que se van a emplear. 
 2. **Stanford CS Education Library** ([link](http://cslibrary.stanford.edu/)): Material de Computer Science de la universidad de Stanford.
 3. **The GNU C Reference Manual** ([link](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)): Manual de referencia del lenguaje C de la GNU.
@@ -50,9 +52,9 @@ Los conceptos básicos relacionados con este lenguaje son bastante similares a l
 7. **C for Python Programmers** ([link](https://www.cs.toronto.edu/~patitsas/cs190/c_for_python.html)): Lenguaje C para programadores de Python de la universidad de Toronto.
 7. **Appendix 1: Chapter 1 for Java Programmers - Libro: Dive Into Systems** ([link](https://diveintosystems.org/book/Appendix1/index.html))
 
-A manera de resumen, se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
+A manera de resumen se presentan varias **Reference Sheets** ([link](reference_sheets/)). De estas se resalta la **C Reference Card (ANSI)** ([link](https://www.math.brown.edu/johsilve/ReferenceCards/CRefCard.v2.2.pdf))
 
-## Practica
+## Práctica
 
 > **Nota**: Esta práctica es una traducción de la práctica **Reverse** del libro del profesor Remzi. Esta traducción puede tener algunos errores y no ser fiel con lo que el autor quiere transmitir. Si desea leerla en inglés puede hacerlo en el siguiente ([enlace](https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse)).
 
@@ -129,22 +131,22 @@ Suena fácil, ¿verdad? Debería serlo. Pero hay algunos detalles...
 
 ### Rutinas de utilidad
 
-Para salir, llame `exit(1)`, el numero que se pasa a `exit()`, esta disponible indica al usuario si el programa ha devuelto un error (es decir, devuelve un valor distinto de cero) o ha salido limpiamente (es decir, devuelve 0).
+Para salir, llame `exit(1)`, el número que se pasa a `exit()` indica al usuario si el programa ha devuelto un error (es decir, devuelve un valor distinto de cero) o ha salido limpiamente (es decir, devuelve 0).
 
 Para leer el archivo de entrada, las siguientes rutinas le harán la vida más fácil: `fopen()`, `getline()`, y `fclose()`.
 
 Para desplegar (en la pantalla, o en una archivo), use la función `fprintf()`.  Tenga en cuenta que es fácil escribir en la salida estándar pasando `stdout` a `fprintf()`; también es fácil escribir en un archivo pasando el `FILE *` devuelto por `fopen`, por ejemplo, `fp=fopen(...); fprintf(fp, ...);`.
 
-La rutina `malloc()` es util para reserva de memoria. ¿Quizás para añadir elementos a una lista?
+La rutina `malloc()` es útil para reserva de memoria. ¿Quizás para añadir elementos a una lista?
 
 Si no sabe como utilizar estas funciones, consulte el manual (`man`). Por ejemplo, escribir en la terminal `man malloc` le mostrará bastante información sobre `malloc`
 
 ### Tips
 
-**Start small, and get things working incrementally**  - **Empieze poco a poco y haga que las cosas funcionen gradualmente**: Por ejemplo, primero haga un programa que simplemente lea en el archivo de entrada, una línea a la vez, y luego imprima lo que se lea. Luego, poco a poco vaya añadiendo características y probandolas sobre la marcha.
+**Start small, and get things working incrementally**  - **Empieze poco a poco y haga que las cosas funcionen gradualmente**: Por ejemplo, primero haga un programa que simplemente lea en el archivo de entrada, una línea a la vez, y luego imprima lo que se lea. Luego, poco a poco vaya añadiendo características y probándolas sobre la marcha.
 
-Por ejemplo, la forma de escribir este código es primero escribir algun fragmento de codigo que usara `fopen()`, `getline()` y `fclose()` para leer el archivo de entrada y luego imprimirlo. Despues, escribir el código para almacenar cada linea leida en la lista enlazada y verificar que esto funciona correctamente. A continuación, se imprime la lista en orden inverso. Posteriormente, asegurarse de que los casos de error son manejados y asi sucesivamente...
+Por ejemplo, la forma de escribir este código es primero escribir algún fragmento de óodigo que use `fopen()`, `getline()` y `fclose()` para leer el archivo de entrada y luego imprimirlo. Después, escribir el código para almacenar cada línea leída en la lista enlazada y verificar que esto funciona correctamente. A continuación, se imprime la lista en orden inverso. Posteriormente, asegurarse de que los casos de error son manejados y así sucesivamente...
 
-**Testing is critical** - **Las pruebas son fundamentales**: Un gran programador dijo que hay que escribir de cinco a diez líneas de código de prueba por cada línea de código que se produzca; probar el código para asegurarte de que funciona es crucial. Escriba pruebas para ver si el código maneja todos los casos que este debería tratar. Se debe ser lo más exhaustivo posible. Por supuesto, a la hora de calificar los proyectos, esto sera una regla. Por lo tanto, es mejor que encuentre los errores primero, antes de que lo hagamos nosotros.
+**Testing is critical** - **Las pruebas son fundamentales**: Un gran programador dijo que hay que escribir de cinco a diez líneas de código de prueba por cada línea de código que se produzca; probar el código para asegurarse de que funciona es crucial. Escriba pruebas para ver si el código maneja todos los casos que este debería tratar. Se debe ser lo más exhaustivo posible. Por supuesto, a la hora de calificar los proyectos, esto será una regla. Por lo tanto, es mejor que encuentre los errores primero, antes de que lo hagamos nosotros.
 
-**Keep old versions around** - **Conserve las versiones antiguas**: Mantenga copias de versiones anteriores de su programa, ya que a veces se pueden introducir errores y no ser capaz de corregirlos fácilmente. Una forma sencilla de hacer esto es mantener copias, haciendo explícitamente copias del archivo en varios puntos durante el desarrollo. Por ejemplo, suponiendo que tenga una versión simple de `reverse.c` funcionando (por ejemplo, que sólo lea el archivo); use `cp reverse.c reverse.v1.c` para hacer una copia en el archivo `reverse.v1.c`. Los desarrolladores más sofisticados usan sistemas de control de versiones git (quizás a través de github); vale la pena aprender una herramienta así, ¡así que hagalo!
+**Keep old versions around** - **Conserve las versiones antiguas**: Mantenga copias de versiones anteriores de su programa, ya que a veces se pueden introducir errores y no ser capaz de corregirlos fácilmente. Una forma sencilla de hacer esto es mantener copias, haciendo explícitamente copias del archivo en varios puntos durante el desarrollo. Por ejemplo, suponiendo que tenga una versión simple de `reverse.c` funcionando (por ejemplo, que sólo lea el archivo); use `cp reverse.c reverse.v1.c` para hacer una copia en el archivo `reverse.v1.c`. Los desarrolladores más sofisticados usan sistemas de control de versiones git (quizás a través de github); vale la pena aprender una herramienta así, ¡así que hágalo!
