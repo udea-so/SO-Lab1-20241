@@ -35,8 +35,8 @@ Para llevar a cabo el procedimiento descrito anteriormente es importante que ten
 3. **Laboratorio git parte 1** ([link](https://github.com/dannymrock/UdeA-SO-Lab/tree/master/lab0/lab0a/git_basico)): Apuntes de clase viejos sobre el manejo del git.
 
 Además del manejo de la herramienta git, es sumamente importante tener un conocimiento sobre el manejo de la línea de comandos de linux. En los siguientes enlaces puede consultar algunos tutoriales sobre este tema: 
-1. ...
-2. ...
+1. **Introducción a Git** ([link](https://learn.microsoft.com/es-es/training/modules/intro-to-git/))
+2. **Introducción a GitHub** ([link](https://learn.microsoft.com/es-es/training/modules/introduction-to-github/))
 
 ## Recursos lenguaje C
 
