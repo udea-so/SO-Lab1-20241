@@ -1,3 +1,10 @@
+#include <stdio.h>        //Entradas y salidas estandar
+#include <stdlib.h>       //Para manejo dinámico de datos
+#include <string.h>       //Manejo de cadenas de caracteres
+#include <unistd.h>
+//Tamaño del buffer
+#define MAX_LENGTH 4000
+
 int main(int argc, char *argv[]) {
     limpiarPantalla();
     mostrarAnimacion();
