@@ -1,16 +1,13 @@
-<<<<<<< HEAD
 #include <stdio.h>        //Entradas y salidas estandar
 #include <stdlib.h>       //Para manejo dinámico de datos
 #include <string.h>       //Manejo de cadenas de caracteres
 #include <unistd.h>
 //Tamaño del buffer
 #define MAX_LENGTH 4000
-=======
 void esperarTecla() {
     printf("\nPresiona una tecla para continuar...");
     getchar();  // Espera a la pulsación una tecla
 }
->>>>>>> f057dbb7644df3d70f6efd99c39e0be6162dbe96
 
 int main(int argc, char *argv[]) {
     limpiarPantalla();
