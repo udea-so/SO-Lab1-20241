@@ -20,5 +20,17 @@ int main(int argc, char const *argv[])
     	exit(1);
   	}
 
+  	// Test 3
+  	if (argc == 3){
+  		if ((in = fopen(argv[1], "r")) == NULL) {
+      		fprintf(stderr, "reverse: cannot open file '%s'\n", argv[1]);
+      		exit(1);
+      	}
+      	if ((in = fopen(argv[2], "w")) == NULL) {
+      		fprintf(stderr, "reverse: cannot open file '%s'\n", argv[2]);
+      		exit(1);
+      	}
+  	}
+
 	return 0;
 } 
