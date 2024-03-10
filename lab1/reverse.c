@@ -8,25 +8,37 @@ a star, and may wrap over lines */
 #include <string.h>
 
 
-void reverseText(FILE *inputFile, FILE *outputFile, bool *withOutput) {
-    const int MAX_LENGTH = 256;
-    char line[MAX_LENGTH];
+void reverseText(FILE *input, FILE *output, bool withOutput) {
+    char **lines = NULL;
+    char *buffer = NULL;
+    size_t line_count = 0;
+    ssize_t read;
 
-    while(fgets(line, MAX_LENGTH, inputFile) != NULL){
-        int lineLength = strlen(line);
-
-        for(int i = lineLength -1; i >= 0; i--){
-            if(withOutput){
-                fputc(line[i], outputFile);
-            } else {
-                printf("%s", line[i]);
-            }
-            
-        }
+    // Read lines from input file into dynamically allocated memory
+    while ((read = getline(&buffer, &read, input)) != -1) {
+        lines = realloc(lines, (line_count + 1) * sizeof(char *));
+        lines[line_count] = malloc(read);
+        strcpy(lines[line_count], buffer);
+        line_count++;
     }
 
+    // Print lines in reverse order to output file or stdout
+    for (size_t i = line_count; i > 0; i--) {
+        if(withOutput){
+            fprintf(output, "%s", lines[i - 1]);
+            free(lines[i - 1]);
+        } else {
+            printf("%s", lines[i - 1]);
+        }
+        
+    }
 
+    // Free remaining allocated memory
+    free(lines);
+    free(buffer);
 }
+
+
 
 FILE *openFile(char *filename, char *mode) {
     FILE *file = fopen(filename, mode);
