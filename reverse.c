@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv){
+int main(int argc, char *argv[]){
 
     if(argc >3){      
     fprintf(stderr, "usage: reverse <input> <output>\n");
@@ -10,9 +10,9 @@ int main(int argc, char *argv){
 
     FILE *inputFile;
     
-	inputFile = fopen("file.txt", "r");
+	inputFile = fopen(argv[1], "r");
     if(inputFile == NULL){
-					fprintf(stderr, "reverse: cannot open file '/no/such/file.txt'\n");
+		fprintf(stderr, "reverse: cannot open file '%s'\n", argv[1]);
         exit(1);
 	}
 	fclose(inputFile);
