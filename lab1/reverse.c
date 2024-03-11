@@ -6,6 +6,9 @@ a star, and may wrap over lines */
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 
 void reverseText(FILE *input, FILE *output, bool withOutput) {
@@ -38,6 +41,15 @@ void reverseText(FILE *input, FILE *output, bool withOutput) {
     free(buffer);
 }
 
+int compareFileNames(const char *file1, const char *file2) {
+    return strcmp(file1, file2) == 0;
+}
+
+int isHardlinked(const char *filename) {
+    struct stat fileInfo;
+    return fileInfo.st_nlink > 1;
+}
+
 
 
 FILE *openFile(char *filename, char *mode) {
@@ -54,6 +66,9 @@ int main(int argc, char *argv[])
 {
     FILE *input = NULL;   
     FILE *output = stdout;
+    const char *file1 = argv[1];
+    const char *file2 = argv[2];
+
 
     switch(argc){
         case 1: //Case if ./reverse
@@ -70,12 +85,16 @@ int main(int argc, char *argv[])
         case 3: //Case if ./reverse input.txt output.txt
             input = openFile(argv[1], "r");
             output = openFile(argv[2], "w");
+            if(compareFileNames(file1, file2) || isHardlinked(file1)){
+                fprintf(stderr, "reverse: input and output file must differ\n");
+            }
             reverseText(input, output, true);
             exit(0);
         break;
         default: //If more than 3
             fprintf(stderr, "usage: reverse <input> <output>\n");
             exit(1);
+        break;    
     }
 
 }
