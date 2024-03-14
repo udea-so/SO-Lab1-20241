@@ -43,3 +43,42 @@ void reverseText(FILE *input, FILE *output, bool withOutput) {
     free(lines);
     free(buffer);
 }
+
+/*
+Attempts to open a file and if the file is null or doesn't exist it exit with an error
+*/
+FILE *openFile(char *filename, char *mode) {
+    FILE *file = fopen(filename, mode);
+    if (file == NULL) {
+        fprintf(stderr, "reverse: cannot open file '/no/such/file.txt'\n");
+        exit(1);
+    }
+    return file;
+}
+
+/*
+Main method
+*/
+int main(int argc, char *argv[])
+{
+    FILE *input = NULL;   
+    FILE *output = stdout;
+    const char *file1 = argv[1];
+    const char *file2 = argv[2];
+
+
+    switch(argc){
+        case 1: // When the command is passed without more arguments: ./reverse
+            printf("Enter the file location, then press CTRL + D");
+            input = openFile(stdin , "r");
+            reverseText(input, output, false);
+            exit(0);
+        break;
+        case 2: //When the command is passed with the input file: ./reverse input.txt
+            input = openFile(file1, "r");
+            reverseText(input, output, false);
+            exit(0);
+        break;
+
+    }
+}
