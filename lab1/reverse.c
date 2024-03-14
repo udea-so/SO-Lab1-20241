@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
             exit(0);
         break;
         case 2: //When the command is passed with the input file: ./reverse input.txt
-            input = openFile(file1, "r");
+            input = openFile(file, "r");
             reverseText(input, output, false);
             exit(0);
         break;
