@@ -49,8 +49,11 @@ void reverseText(FILE *input, FILE *output, bool withOutput) {
 Compares the files making sure that both files are working correctly
 returns 1 if both file names are equal
 */
-int compareFileNames(const char *file1, const char *file2) {
+int areFileNamesTheSame(const char *file1, const char *file2) {
+//    int result = strcmp(file1, file2);
+//    printf("%d",result);
     return strcmp(file1, file2) == 0;
+    
 }
 
 
@@ -58,9 +61,13 @@ int compareFileNames(const char *file1, const char *file2) {
 Validates that a file isn't hard linked
 return 1 if there if the number of hardlinks is greater than one
 */
-int isHardlinked(const char *filename) {
-    struct stat fileInfo;
-    return fileInfo.st_nlink > 1;
+int isHardlinked(const char *filename1, const char *filename2) {
+    struct stat fileInfo1, fileInfo2;
+    if (stat(filename1, &fileInfo1) == -1 || stat(filename2, &fileInfo2) == -1) {
+        fprintf(stderr, "reverse: cannot open file '/no/such/file.txt'\n");
+        exit(1);
+    }
+    return fileInfo1.st_ino == fileInfo2.st_ino;
 }
 
 
@@ -104,8 +111,9 @@ int main(int argc, char *argv[])
         case 3: //When the command is passed with both input and output files: ./reverse input.txt output.txt
             input = openFile(argv[1] , "r");
             output = openFile(argv[2], "w");
-            if(compareFileNames(file1, file2) || isHardlinked(file1)){
+            if(areFileNamesTheSame(file1, file2) || isHardlinked(file1, file2)){
                 fprintf(stderr, "reverse: input and output file must differ\n");
+                exit(1);
             }
             reverseText(input, output, true);
             exit(0);
