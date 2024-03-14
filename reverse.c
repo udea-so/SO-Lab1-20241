@@ -85,23 +85,25 @@ int main(int argc, char *argv[])
     FILE *output = stdout;
     const char *file1 = argv[1];
     const char *file2 = argv[2];
+    char filename[100];
 
 
     switch(argc){
         case 1: // When the command is passed without more arguments: ./reverse
             printf("Enter the file location, then press CTRL + D");
-            input = openFile(stdin , "r");
+            scanf("%99s", filename);
+            input = openFile(filename, "r");
             reverseText(input, output, false);
             exit(0);
         break;
         case 2: //When the command is passed with the input file: ./reverse input.txt
-            input = openFile(file1, "r");
+            input = openFile(argv[1], "r");
             reverseText(input, output, false);
             exit(0);
         break;
         case 3: //When the command is passed with both input and output files: ./reverse input.txt output.txt
-            input = openFile(file1 , "r");
-            output = openFile(file2, "w");
+            input = openFile(argv[1] , "r");
+            output = openFile(argv[2], "w");
             if(compareFileNames(file1, file2) || isHardlinked(file1)){
                 fprintf(stderr, "reverse: input and output file must differ\n");
             }
