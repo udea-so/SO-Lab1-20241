@@ -46,7 +46,7 @@ void reverseText(FILE *input, FILE *output, bool withOutput) {
 
 
 /*
-Compares the files makingf sure that both files are working correctly
+Compares the files making sure that both files are working correctly
 returns 1 if both file names are equal
 */
 int compareFileNames(const char *file1, const char *file2) {
@@ -90,18 +90,18 @@ int main(int argc, char *argv[])
     switch(argc){
         case 1: // When the command is passed without more arguments: ./reverse
             printf("Enter the file location, then press CTRL + D");
-            input = stdin;
+            input = openFile(stdin , "r");
             reverseText(input, output, false);
             exit(0);
         break;
         case 2: //When the command is passed with the input file: ./reverse input.txt
-            input = openFile(argv[1], "r");
+            input = openFile(file, "r");
             reverseText(input, output, false);
             exit(0);
         break;
         case 3: //When the command is passed with both input and output files: ./reverse input.txt output.txt
-            input = openFile(argv[1], "r");
-            output = openFile(argv[2], "w");
+            input = openFile(file1 , "r");
+            output = openFile(file2, "w");
             if(compareFileNames(file1, file2) || isHardlinked(file1)){
                 fprintf(stderr, "reverse: input and output file must differ\n");
             }
